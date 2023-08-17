@@ -1,0 +1,23 @@
+.navbar-list
+{
+    display: flex;
+    margin-left: auto; /*align right, might change this, doesn't feel right for some reason?*/
+    margin-right: 2em;
+    gap: 3rem;
+
+    > li{
+        display: inline;
+        font-weight: bold;
+        font-size: x-large;
+
+        > a {
+            text-decoration: none;
+        }
+    }
+}
+
+.navbar{
+    display: flex;
+    padding: 1em;
+    justify-content: center;
+}

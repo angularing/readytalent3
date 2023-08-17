@@ -1,0 +1,17 @@
+#page-not-found{
+    text-align: center;
+    margin: auto;
+
+    > .go-home-button{
+        background-color: orangered;
+        border-radius: 1em;
+        width: fit-content;
+        padding: 0.5em 1em;
+        margin: auto;
+
+        > a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
