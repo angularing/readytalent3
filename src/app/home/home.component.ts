@@ -16,23 +16,47 @@ export class HomeComponent {
 
   searchResults: any[] = []; // Placeholder for search results
 
-  searchJobs() {
-
-    // Mock search logic
-    this.searchResults = [
+  //TODO: replace with service
+  data: any[] = 
+    [
       { title: 'Software Developer', company: 'TechCo', type: 'Full Time' },
       { title: 'Graphic Designer', company: 'Design Inc', type: 'Part Time' },
       { title: 'Project Manager', company: 'Projects Ltd', type: 'Contract' }
       // You can add more mock data or replace this with actual API calls
     ];
 
-    this.searchResults = this.searchResults.filter(job => {
-      if (this.selectedEmploymentType === 'title') {
-        return job.title.toLowerCase().includes(this.searchQuery.toLowerCase());
-      } else if (this.selectedEmploymentType === 'company') {
-        return job.company.toLowerCase().includes(this.searchQuery.toLowerCase());
-      } else if (this.selectedEmploymentType === 'type') {
-        return job.type.toLowerCase().includes(this.searchQuery.toLowerCase());
+  ngOnInit(){ //see https://angular.io/guide/lifecycle-hooks#oninit
+    this.searchResults = [
+      { title: 'Software Developer', company: 'TechCo', type: 'Full Time' },
+      { title: 'Graphic Designer', company: 'Design Inc', type: 'Part Time' },
+      { title: 'Project Manager', company: 'Projects Ltd', type: 'Contract' }
+      // You can add more mock data or replace this with actual API calls
+    ];
+  }
+
+  getJobs(){
+    return this.data;
+  }
+
+  searchJobs() {
+    //doesn't work
+    // this.searchResults = this.searchResults.filter(job => {
+    //   if (this.selectedEmploymentType === 'title') {
+    //     return job.title.toLowerCase().includes(this.searchQuery.toLowerCase());
+    //   } else if (this.selectedEmploymentType === 'company') {
+    //     return job.company.toLowerCase().includes(this.searchQuery.toLowerCase());
+    //   } else if (this.selectedEmploymentType === 'type') {
+    //     return job.type.toLowerCase().includes(this.searchQuery.toLowerCase());
+    //   }
+    // });
+
+    const query = this.searchQuery.toLowerCase();
+    this.searchResults = this.getJobs().filter(job => {
+      if (job.title.toLowerCase() == query 
+          || job.type.toLowerCase() == query 
+          || job.company.toLowerCase() == query)
+      {
+        return job;
       }
     });
 
@@ -41,5 +65,6 @@ export class HomeComponent {
     console.log('Search query:', this.searchQuery);
     console.log('Selected Employent type:', this.selectedEmploymentType);
     console.log('Selected programme:', this.selectedProgramme);
+    console.log(this.searchResults);
   }
 }

@@ -16,3 +16,13 @@
       </div>
     </form>
   </section>
+
+  <section class="results">
+    <div class="result-item" *ngFor="let result of searchResults">
+        <!-- temp -->
+        <img src="/assets/sit_logo.png"/>
+        <h2>{{result.company}}</h2>
+        <em>{{result.title}}</em>
+        <p>{{result.type}}</p>
+    </div>
+  </section>
