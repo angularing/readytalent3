@@ -6,8 +6,12 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <nav class="navbar">
-      <div class="navbar-logo"><p>INSERT LOGO HERE</p></div>
+  <nav class="navbar">
+  <a href="/">
+    <div class="navbar-logo">
+      <img class="navbar-logo-image" src="/assets/sit_logo.png" alt="logo" aria-hidden="true">
+    </div>
+  </a>
       <ul class="navbar-list">
         <li><a href="/">Home</a></li>
         <li><a href="/search">Search</a></li>

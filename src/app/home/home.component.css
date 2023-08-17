@@ -1,0 +1,45 @@
+.results {
+    display: grid;
+    column-gap: 14px;
+    row-gap: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+    margin-top: 50px;
+    justify-content: space-around;
+  }
+
+  .search-inputs {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dropdown {
+    height: 35px;
+    width: calc(35% - 15px); /* 50% width for each dropdown minus spacing */
+    margin-right: 10px; /* Spacing between dropdowns */
+    font-size: 20px; /* Adjust the font size as needed */
+  }
+  
+  input[type="text"] {
+    border: solid 1px var(black);
+    padding: 10px;
+    border-radius: 8px;
+    margin-right: 10px;
+    display: inline-block;
+    width: 25%;
+  }
+  
+  
+  @media (min-width: 500px) and (max-width: 768px) {
+    .results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    input[type="text"] {
+        width: 70%;
+    }   
+  }
+  
+  @media (max-width: 499px) {
+    .results {
+        grid-template-columns: 1fr;
+    }    
+  }
