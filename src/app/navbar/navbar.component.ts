@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
     </div>
   </a>
       <ul class="navbar-list">
-        <li><a href="/">Dashboard</a></li>
+        <li><a href="/" class="mouse">Dashboard</a></li>
         <li class="dropdown">
         <a href="#" class="dropdown-toggle">Jobs &#9662;</a>
           <ul class="dropdown-menu">
@@ -21,9 +21,7 @@ import { CommonModule } from '@angular/common';
             <li><a href="/my-applications">My applications</a></li>
           </ul>
         </li>
-          
-        <li><a href="/student-profile">My Profile</a></li>
-
+        <li><a href="/student-profile" class="mouse">My Profile</a></li>
         <li class="dropdown">
         <a href="#" class="dropdown-toggle">Hello user &#9662;</a>
           <ul class="dropdown-menu">
@@ -33,6 +31,7 @@ import { CommonModule } from '@angular/common';
         </li>
       </ul>
     </nav>
+
   `,
   styleUrls: ['./navbar.component.css']
 })

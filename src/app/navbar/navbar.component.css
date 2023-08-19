@@ -6,7 +6,7 @@
     gap: 3rem;
 
     > li{
-        display: inline;
+        display: inline-block;
         font-weight: bold;
         font-size: x-large;
 
@@ -22,31 +22,34 @@
     justify-content: center;
 }
 
+.mouse:hover {
+    color: red;
+  }
+
 .dropdown {
     position: relative;
-  }
-  
-  .dropdown-toggle {
+}
+
+.dropdown-toggle {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #333; /* Default text color */
-  }
-  
-  .dropdown-toggle:hover {
-    color: #007bff; /* Change color on hover */
-  }
-  
-  .dropdown-menu {
+    color: #000000; /* Default text color */
+}
+
+.dropdown-toggle:hover {
+    color: red; /* Change color on hover */
+}
+
+.dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     background-color: #fff;
-    border: 1px solid #ccc;
-  }
-  
-  .dropdown:hover .dropdown-menu {
+    border: 1px solid #060606;
+}
+
+.show {
     display: block;
-  }
-  
+}
