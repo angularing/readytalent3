@@ -1,7 +1,7 @@
 export class Job{
     title: string;
     company: string;
-    type: string;
+    type: string; //TODO: could replace with enum instead
 
     constructor(title: string, company: string, type: string){
         this.company = company;
