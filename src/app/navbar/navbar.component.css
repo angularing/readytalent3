@@ -21,3 +21,32 @@
     padding: 1em;
     justify-content: center;
 }
+
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333; /* Default text color */
+  }
+  
+  .dropdown-toggle:hover {
+    color: #007bff; /* Change color on hover */
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  

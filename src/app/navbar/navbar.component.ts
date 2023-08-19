@@ -13,10 +13,17 @@ import { CommonModule } from '@angular/common';
     </div>
   </a>
       <ul class="navbar-list">
-        <li><a href="/">Home</a></li>
-        <li><a href="/search">Search</a></li>
-        <li><a href="/applications">Applications</a></li>
-        <li><a href="/profile">Profile</a></li>
+        <li><a href="/">Dashboard</a></li>
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Jobs &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="/job-search">Job search</a></li>
+            <li><a href="/my-applications">My applications</a></li>
+          </ul>
+        </li>
+          
+        <li><a href="/student-profile">My Profile</a></li>
+        <li><a href="/profile">Hello user</a></li>
       </ul>
     </nav>
   `,
