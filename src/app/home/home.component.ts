@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Job } from '../models/job-model';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,7 @@ export class HomeComponent {
   searchResults: any[] = []; // Placeholder for search results
 
   //TODO: replace with service
-  data: any[] = 
+  data: Job[] = 
     [
       { title: 'Software Developer', company: 'TechCo', type: 'Full Time' },
       { title: 'Graphic Designer', company: 'Design Inc', type: 'Part Time' },
@@ -39,25 +40,11 @@ export class HomeComponent {
   }
 
   searchJobs() {
-    //doesn't work
-    // this.searchResults = this.searchResults.filter(job => {
-    //   if (this.selectedEmploymentType === 'title') {
-    //     return job.title.toLowerCase().includes(this.searchQuery.toLowerCase());
-    //   } else if (this.selectedEmploymentType === 'company') {
-    //     return job.company.toLowerCase().includes(this.searchQuery.toLowerCase());
-    //   } else if (this.selectedEmploymentType === 'type') {
-    //     return job.type.toLowerCase().includes(this.searchQuery.toLowerCase());
-    //   }
-    // });
-
     const query = this.searchQuery.toLowerCase();
     this.searchResults = this.getJobs().filter(job => {
-      if (job.title.toLowerCase() == query 
-          || job.type.toLowerCase() == query 
-          || job.company.toLowerCase() == query)
-      {
-        return job;
-      }
+      return  (job.title.toLowerCase() == query 
+            || job.type.toLowerCase() == query 
+            || job.company.toLowerCase() == query)
     });
 
     // Implement your search logic here based on the searchQuery, selectedCategory, and selectedType
