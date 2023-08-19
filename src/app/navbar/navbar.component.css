@@ -3,6 +3,7 @@
     display: flex;
     margin-left: auto; /*align right, might change this, doesn't feel right for some reason?*/
     margin-right: 2em;
+    margin-top: 2em;
     gap: 3rem;
 
     > li{
@@ -42,15 +43,15 @@
     color: red; /* Change color on hover */
 }
 
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
+.dropdown-menu{
+    display:none;
+    position:absolute;
+    top: 30%;
     left: 0;
     background-color: #fff;
     border: 1px solid #060606;
 }
 
-.show {
+.dropdown:hover .dropdown-menu {
     display: block;
-}
+  }

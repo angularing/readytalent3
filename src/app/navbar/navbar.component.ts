@@ -17,8 +17,8 @@ import { CommonModule } from '@angular/common';
         <li class="dropdown">
         <a href="#" class="dropdown-toggle">Jobs &#9662;</a>
           <ul class="dropdown-menu">
-            <li><a href="/job-search">Job search</a></li>
-            <li><a href="/my-applications">My applications</a></li>
+            <li><a href="/job-search" class="show">Job Search</a></li>
+            <li><a href="/my-applications">My Applications</a></li>
           </ul>
         </li>
         <li><a href="/student-profile" class="mouse">My Profile</a></li>
