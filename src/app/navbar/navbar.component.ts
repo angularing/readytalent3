@@ -23,7 +23,14 @@ import { CommonModule } from '@angular/common';
         </li>
           
         <li><a href="/student-profile">My Profile</a></li>
-        <li><a href="/profile">Hello user</a></li>
+
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle">Hello user &#9662;</a>
+          <ul class="dropdown-menu">
+            <li><a href="/reset-password">Reset Password</a></li>
+            <li><a href="/sign-out">Sign out</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   `,
