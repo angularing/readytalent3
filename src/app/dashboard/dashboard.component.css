@@ -1,0 +1,127 @@
+.status-section {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+    padding-top: 0em;
+     /* flex-direction: column;
+     align-items: flex-start;
+     padding: 20px; */
+   }
+  
+  .status-box {
+    width: 60%;
+    background-color: rgb(225, 225, 225);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .status-number {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .word-label {
+    font-size: 18px;
+  }
+
+  .status-text {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .status-link {
+    text-decoration: none; /* Remove the default link underline */
+   }
+
+  .status-link:hover .status-box {
+    background-color: #f09999; /* Change the background color when hovered */
+   }
+
+  .profile-section {
+    width: 10%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-box {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .profile-username {
+    font-size: 18px;
+  }  
+
+
+  /*2nd draft - working to certain extent*/
+
+  /* .status-section {
+    display: flex;
+    padding-top: 2em;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 60px;
+  }
+  
+  .status-text {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: 5%; 
+  }
+
+  .status-link:hover .status-box {
+    background-color: #f09999; 
+   }
+  
+  .status-box-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .status-box {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    margin: 0 10px;
+  }
+
+  .status-link {
+    text-decoration: none; 
+   }
+  
+  .word-label {
+    font-size: 16px;
+  }
+  
+  .profile-box {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .profile-username {
+    font-size: 18px;
+  }
+   */
+  
+
