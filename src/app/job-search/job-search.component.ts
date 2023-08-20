@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Job } from '../models/job-model';
+import { JobService } from '../job.service';
 
 @Component({
   selector: 'app-job-search',
@@ -17,17 +18,18 @@ export class JobSearchComponent {
 
   searchResults: any[] = []; // Placeholder for search results
 
-  //TODO: replace with service
-  data: Job[] =
-    [
-      { title: 'Software Developer', company: 'TechCo', type: 'Full Time' },
-      { title: 'Graphic Designer', company: 'Design Inc', type: 'Part Time' },
-      { title: 'Project Manager', company: 'Projects Ltd', type: 'Contract' }
-      // You can add more mock data or replace this with actual API calls
-    ];
+  data: Job[] = [];
+
+  //Dependency Injection for Job service
+  constructor(private jobService: JobService){
+
+  }
 
   ngOnInit() { //see https://angular.io/guide/lifecycle-hooks#oninit
-    this.searchResults = this.getJobs();
+    this.jobService.getJobsObservable().subscribe((data : any) => {
+      this.data = data._embedded.jobs;
+      this.searchResults = this.getJobs();
+    });
   }
 
   getJobs() {

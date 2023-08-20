@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { JobSearchComponent } from './job-search/job-search.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { JobSearchComponent } from './job-search/job-search.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule,
     NavbarComponent, //standalone
   ],
   providers: [],
