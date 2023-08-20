@@ -1,4 +1,5 @@
 <section class="search-bar">
+  <div class="color-box"></div> <!-- Add this div for the color box -->
     <form (ngSubmit)="searchJobs()">
       <div class="search-inputs">
         <input type="text" placeholder="Search Latest Available Job by Job Title, Company or Types" [(ngModel)]="searchQuery" name="searchQuery">
@@ -10,7 +11,7 @@
             <option value="" selected>Programmes</option>
             <option *ngFor="let programme of Programmes" [value]="programme.toLowerCase()">{{ programme }}</option>
           </select>
-        <button class="primary" type="submit">Search</button>
+        <button class="primary primary-padding" type="submit">Search</button>
       </div>
     </form>
   </section>
