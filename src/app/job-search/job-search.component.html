@@ -1,4 +1,4 @@
-<section>
+<section class="search-bar">
     <form (ngSubmit)="searchJobs()">
       <div class="search-inputs">
         <input type="text" placeholder="Search Latest Available Job by Job Title, Company or Types" [(ngModel)]="searchQuery" name="searchQuery">
@@ -22,5 +22,6 @@
         <h2>{{result.company}}</h2>
         <em>{{result.title}}</em>
         <p>{{result.type}}</p>
+        <a class="result-link" href="/temp"><span></span></a>
     </div>
   </section>
