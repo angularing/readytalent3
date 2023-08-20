@@ -3,11 +3,11 @@
       <div class="search-inputs">
         <input type="text" placeholder="Search Latest Available Job by Job Title, Company or Types" [(ngModel)]="searchQuery" name="searchQuery">
         <select class="dropdown" [(ngModel)]="selectedEmploymentType" name="selectedEmploymentType">
-            <option value="" disabled selected>Employment Types</option>
+            <option value="" selected>Employment Types</option>
             <option *ngFor="let type of EmploymentTypes" [value]="type.toLowerCase()">{{ type }}</option>
           </select>
           <select class="dropdown"  placeholder="Programmes" [(ngModel)]="selectedProgramme" name="selectedProgramme">
-            <option value="" disabled selected>Programmes</option>
+            <option value="" selected>Programmes</option>
             <option *ngFor="let programme of Programmes" [value]="programme.toLowerCase()">{{ programme }}</option>
           </select>
         <button class="primary" type="submit">Search</button>

@@ -9,8 +9,8 @@ import { JobService } from '../job.service';
 })
 export class JobSearchComponent {
   searchQuery: string = '';
-  selectedEmploymentType: string = 'IWSP';
-  selectedProgramme: string = 'BSc RTIS';
+  selectedEmploymentType: string = '';
+  selectedProgramme: string = '';
 
   // Mock data for dropdown lists
   EmploymentTypes: string[] = ['Full Time', 'Part Time', 'Contract', 'IWSP'];
@@ -19,6 +19,13 @@ export class JobSearchComponent {
   searchResults: any[] = []; // Placeholder for search results
 
   data: Job[] = [];
+
+  static readonly JobTypes = {
+    FullTime: "Full Time",
+    PartTime: "Part Time",
+    Contract: "Contract",
+    IWSP: "IWSP",
+  } as const;
 
   //Dependency Injection for Job service
   constructor(private jobService: JobService){
@@ -37,12 +44,35 @@ export class JobSearchComponent {
   }
 
   searchJobs() {
-    const query = this.searchQuery.toLowerCase();
-    this.searchResults = this.getJobs().filter(job => {
-      return (job.title.toLowerCase() == query
-        || job.type.toLowerCase() == query
-        || job.company.toLowerCase() == query)
-    });
+    this.searchResults = this.getJobs();
+
+    //filter type
+    if (this.selectedEmploymentType.length > 0){
+      const type = this.selectedEmploymentType.toLowerCase();
+      this.searchResults = this.searchResults.filter(job => {
+        return job.type.toLowerCase() == type;
+      });
+    }
+
+    //NOTE: NOT WORKING
+    //TODO: EXTEND MODEL TO INCLUDE COURSES/PROGRAM.
+    //filter program/course
+    // if (this.selectedProgramme.length > 0){
+    //   const program = this.selectedProgramme.toLowerCase();
+    //   this.searchResults = this.searchResults.filter(job => {
+    //     return job.course.toLowerCase() == program;
+    //   });
+    // }
+    
+    //filter search
+    if (this.searchQuery.length > 0){
+      const query = this.searchQuery.toLowerCase();
+      this.searchResults = this.searchResults.filter(job => {
+        return (job.title.toLowerCase() == query
+          || job.type.toLowerCase() == query
+          || job.company.toLowerCase() == query)
+      });
+    }
 
     // Implement your search logic here based on the searchQuery, selectedCategory, and selectedType
     // For example, you can call an API service to fetch the relevant job data
