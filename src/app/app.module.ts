@@ -8,13 +8,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { JobSearchComponent } from './job-search/job-search.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PageNotFoundComponent,
-    JobSearchComponent
+    JobSearchComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

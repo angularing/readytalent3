@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
     </div>
   </a>
       <ul class="navbar-list">
-        <li><a href="/" class="mouse">Dashboard</a></li>
+        <li><a href="/dashboard" class="mouse">Dashboard</a></li>
         <li class="dropdown">
         <a href="#" class="dropdown-toggle">Jobs &#9662;</a>
           <ul class="dropdown-menu">
