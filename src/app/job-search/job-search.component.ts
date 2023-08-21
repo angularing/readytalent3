@@ -26,7 +26,7 @@ export class JobSearchComponent {
   searchResults: any[] = []; // Placeholder for search results
 
   data: Job[] = [];
-  displayType: DisplayType = "Grid";
+  displayType: DisplayType = DisplayTypes.List;
 
   //Dependency Injection for Job service
   constructor(private jobService: JobService){
@@ -48,10 +48,10 @@ export class JobSearchComponent {
       return;
 
     switch(this.displayType){
-      case 'Grid':
+      case DisplayTypes.Grid:
         resultsElement!.className = "results-grid";
         break;
-      case 'List':
+      case DisplayTypes.List:
         resultsElement!.className = "results-list";
         break;
     }

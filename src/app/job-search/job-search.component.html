@@ -1,31 +1,64 @@
 <section class="search-bar">
   <div class="color-box"></div> <!-- Add this div for the color box -->
-    <form (ngSubmit)="searchJobs()">
-      <div class="search-inputs">
-        <input type="text" placeholder="Search Latest Available Job by Job Title, Company or Types" [(ngModel)]="searchQuery" name="searchQuery">
-        <select class="dropdown" [(ngModel)]="selectedEmploymentType" name="selectedEmploymentType">
-            <option value="" selected>Employment Types</option>
-            <option *ngFor="let type of EmploymentTypes" [value]="type.toLowerCase()">{{ type }}</option>
-          </select>
-          <select class="dropdown"  placeholder="Programmes" [(ngModel)]="selectedProgramme" name="selectedProgramme">
-            <option value="" selected>Programmes</option>
-            <option *ngFor="let programme of Programmes" [value]="programme.toLowerCase()">{{ programme }}</option>
-          </select>
-        <button class="primary primary-padding" type="submit">Search</button>
-      </div>
-    </form>
-    <button (click)="toggleView()">
-      Toggle View
-    </button>
-  </section>
+  <form (ngSubmit)="searchJobs()">
+    <div class="search-inputs">
+      <input type="text" placeholder="Search Latest Available Job by Job Title, Company or Types"
+        [(ngModel)]="searchQuery" name="searchQuery">
+      <select class="dropdown" [(ngModel)]="selectedEmploymentType" name="selectedEmploymentType">
+        <option value="" selected>Employment Types</option>
+        <option *ngFor="let type of EmploymentTypes" [value]="type.toLowerCase()">{{ type }}</option>
+      </select>
+      <select class="dropdown" placeholder="Programmes" [(ngModel)]="selectedProgramme" name="selectedProgramme">
+        <option value="" selected>Programmes</option>
+        <option *ngFor="let programme of Programmes" [value]="programme.toLowerCase()">{{ programme }}</option>
+      </select>
+      <button class="primary primary-padding" type="submit">Search</button>
+    </div>
+  </form>
+  <button (click)="toggleView()">
+    Toggle View
+  </button>
+</section>
 
-  <section id="results" class="results-grid">
-    <div class="result-item" *ngFor="let result of searchResults">
-        <!-- temp -->
-        <img src="/assets/sit_logo.png"/>
-        <h2>{{result.company}}</h2>
-        <em>{{result.title}}</em>
-        <p>{{result.type}}</p>
-        <a class="result-link" href="/temp"><span></span></a>
+<section id="results">
+  <div class="results-header">
+    <h1 class="results-header-text">Latest Available Jobs</h1>
+    <div class="divider-line"></div>
+  </div>
+
+  <ng-container *ngIf="displayType == 'Grid'; then grid; else list">
+  </ng-container>
+</section>
+
+<!-- templates -->
+<ng-template #grid>
+  <section class="results-grid">
+    <div class="result-grid-item" *ngFor="let result of searchResults">
+      <!-- temp -->
+      <img src="/assets/sit_logo.png" />
+      <h2>{{result.company}}</h2>
+      <em>{{result.title}}</em>
+      <p>{{result.type}}</p>
+      <a class="result-link" href="/temp"><span></span></a>
     </div>
   </section>
+</ng-template>
+
+<ng-template #list>
+  <section class="results-list">
+    <div class="result-list-item" *ngFor="let result of searchResults">
+      <div class="result-list-item-body">
+        <!-- temp -->
+        <img src="/assets/sit_logo.png" />
+
+        <div class="job-header">
+          <h2 class="job-title">{{result.title}}</h2>
+          <p>{{result.company}}</p>
+        </div>
+
+        <a class="result-link" href="/temp"><span></span></a>
+      </div>
+      <div class="divider-line"></div>
+    </div>
+  </section>
+</ng-template>
