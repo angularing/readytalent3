@@ -26,7 +26,7 @@ export class JobSearchComponent {
   searchResults: any[] = []; // Placeholder for search results
 
   data: Job[] = [];
-  displayType: DisplayType = DisplayTypes.List;
+  displayType: DisplayType = DisplayTypes.Grid;
 
   //Dependency Injection for Job service
   constructor(private jobService: JobService){
@@ -41,21 +41,7 @@ export class JobSearchComponent {
   }
 
   toggleView(){
-    this.displayType = this.displayType == "Grid" ? this.displayType = "List" : this.displayType = "Grid";
-    let resultsElement = document.getElementById("results");
-
-    if (resultsElement == null)
-      return;
-
-    switch(this.displayType){
-      case DisplayTypes.Grid:
-        resultsElement!.className = "results-grid";
-        break;
-      case DisplayTypes.List:
-        resultsElement!.className = "results-list";
-        break;
-    }
-
+    this.displayType = this.displayType == DisplayTypes.Grid ? this.displayType = DisplayTypes.List : this.displayType = DisplayTypes.Grid;
   }
 
   getJobs() {

@@ -14,9 +14,9 @@
 
 .results-grid {
   display: grid;
-  column-gap: 14px;
-  row-gap: 14px;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  column-gap: 1em;
+  row-gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(10em, 20em));
 
   justify-content: space-around;
   justify-items: center;
