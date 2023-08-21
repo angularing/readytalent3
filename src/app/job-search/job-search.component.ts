@@ -2,6 +2,13 @@ import { Component } from '@angular/core';
 import { Job } from '../models/job-model';
 import { JobService } from '../job.service';
 
+const DisplayTypes = {
+  Grid: "Grid",
+  List: "List"
+} as const;
+
+type DisplayType = typeof DisplayTypes[keyof typeof DisplayTypes];
+
 @Component({
   selector: 'app-job-search',
   templateUrl: './job-search.component.html',
@@ -19,13 +26,7 @@ export class JobSearchComponent {
   searchResults: any[] = []; // Placeholder for search results
 
   data: Job[] = [];
-
-  static readonly JobTypes = {
-    FullTime: "Full Time",
-    PartTime: "Part Time",
-    Contract: "Contract",
-    IWSP: "IWSP",
-  } as const;
+  displayType: DisplayType = "Grid";
 
   //Dependency Injection for Job service
   constructor(private jobService: JobService){
@@ -37,6 +38,24 @@ export class JobSearchComponent {
       this.data = data._embedded.jobs;
       this.searchResults = this.getJobs();
     });
+  }
+
+  toggleView(){
+    this.displayType = this.displayType == "Grid" ? this.displayType = "List" : this.displayType = "Grid";
+    let resultsElement = document.getElementById("results");
+
+    if (resultsElement == null)
+      return;
+
+    switch(this.displayType){
+      case 'Grid':
+        resultsElement!.className = "results-grid";
+        break;
+      case 'List':
+        resultsElement!.className = "results-list";
+        break;
+    }
+
   }
 
   getJobs() {

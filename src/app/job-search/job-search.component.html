@@ -14,9 +14,12 @@
         <button class="primary primary-padding" type="submit">Search</button>
       </div>
     </form>
+    <button (click)="toggleView()">
+      Toggle View
+    </button>
   </section>
 
-  <section class="results">
+  <section id="results" class="results-grid">
     <div class="result-item" *ngFor="let result of searchResults">
         <!-- temp -->
         <img src="/assets/sit_logo.png"/>
