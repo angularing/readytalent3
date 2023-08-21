@@ -44,25 +44,33 @@
   </section>
 </ng-template>
 
+<!-- todo: move into component -->
 <ng-template #list>
   <section class="results-list">
     <div class="result-list-item" *ngFor="let result of searchResults">
+      <section class="result-list-item-content">
+        <div class="result-list-item-body">
+          <!-- temp -->
+          <img src="/assets/sit_logo.png" />
 
-      <div class="result-list-item-body">
-        <!-- temp -->
-        <img src="/assets/sit_logo.png" />
+          <section class="job-item">
+            <div class="job-item-name">
+              <h2 class="job-item-title">{{result.title}}</h2>
+              <p class="job-item-company">{{result.company}}</p>
+            </div>
+            <div class="job-item-details-button">
+              <h3>View Details</h3>
+            </div>
+            <div class="job-item-footer">
+              <p><img src="/assets/icons/clock.svg">Closed on XX/XX/XXXX</p>
+              <p>$XX/hour</p>
+              <p><img src="/assets/icons/user.svg">X Vacancies</p>
+              <p><img src="/assets/icons/briefcase.svg">{{result.type}}</p>
+            </div>
+          </section>
 
-
-        <div class="job-header">
-          <h2 class="job-title">{{result.title}}</h2>
-          <p class="job-company">{{result.company}}</p>
         </div>
-
-        <div class="details-button">
-          <h3>View Details</h3>
-        </div>
-      </div>
-
+      </section>
       <div class="divider-line"></div>
     </div>
   </section>
