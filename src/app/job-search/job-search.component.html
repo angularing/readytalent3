@@ -15,14 +15,15 @@
       <button class="primary primary-padding" type="submit">Search</button>
     </div>
   </form>
-  <button (click)="toggleView()">
-    Toggle View
-  </button>
 </section>
 
 <section id="results">
   <div class="results-header">
     <h1 class="results-header-text">Latest Available Jobs</h1>
+    <img class="results-current-view-icon" src="/assets/icons/{{displayType.toLowerCase()}}.svg" alt="Type: {{displayType}}"/>
+    <button class="primary results-toggle-view-button" (click)="toggleView()">
+      Toggle View
+    </button>
     <div class="divider-line"></div>
   </div>
 

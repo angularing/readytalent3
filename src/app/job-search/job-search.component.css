@@ -12,6 +12,27 @@
   margin-bottom: 1em;
 }
 
+.results-header-text{
+  display: inline;
+}
+
+.results-current-view-icon{
+  float: right;
+  margin-left: 0.5rem;
+}
+
+.results-toggle-view-button{
+  display: inline;
+  float: right;
+  padding: 0.25rem;
+  border-radius: 4px;
+}
+
+.results-toggle-view-button:hover{
+  background-color: orangered;
+  scale: 1.1;
+}
+
 .results-grid {
   display: grid;
   column-gap: 1em;
@@ -85,7 +106,7 @@
 .search-inputs {
   display: flex;
   align-items: center;
-
+  
 }
 
 .color-box {
