@@ -66,14 +66,28 @@
 
 .result-list-item-body {
   border: 1.5px solid lightgray;
-  padding: 1em;
+  padding: 2em;
   margin: 1em 1em;
 
   display: flex;
+  flex-direction: row;
 }
 
 .job-title{
   color: #df0000;
+}
+
+.job-company{
+  margin-top: 0.5rem;
+}
+
+.details-button{
+  color: #dd0000;
+  border: 1.5px solid #dd0000;
+  height: fit-content;
+  padding: 0.5em 1em;
+
+  margin-left: auto;
 }
 
 /* search */

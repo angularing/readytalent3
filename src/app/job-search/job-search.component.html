@@ -47,17 +47,22 @@
 <ng-template #list>
   <section class="results-list">
     <div class="result-list-item" *ngFor="let result of searchResults">
+
       <div class="result-list-item-body">
         <!-- temp -->
         <img src="/assets/sit_logo.png" />
 
+
         <div class="job-header">
           <h2 class="job-title">{{result.title}}</h2>
-          <p>{{result.company}}</p>
+          <p class="job-company">{{result.company}}</p>
         </div>
 
-        <a class="result-link" href="/temp"><span></span></a>
+        <div class="details-button">
+          <h3>View Details</h3>
+        </div>
       </div>
+
       <div class="divider-line"></div>
     </div>
   </section>
