@@ -1,0 +1,58 @@
+
+.result-list-item-content{
+    border: 1.5px solid lightgray;
+    padding: 2em;
+    margin: 1em 1em;
+  }
+  
+  .result-list-item-body {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .job-item{
+    display: flex;
+    flex-direction: row;
+  
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .job-item-header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  .job-item-footer{
+    flex-basis: 100%;
+    margin-top: auto;
+  
+    >p{
+      display: inline;
+      margin-right: 2rem;
+  
+      >img{
+        margin-right: 0.25rem;
+        vertical-align: baseline;
+        height: 1rem;
+      }
+    }
+  }
+  
+  .job-item-title{
+    color: #df0000;
+  }
+  
+  .job-item-company{
+    margin-top: 0.5rem;
+  }
+  
+  .job-item-details-button{
+    color: #dd0000;
+    border: 1.5px solid #dd0000;
+    height: fit-content;
+    padding: 0.5em 1em;
+  
+    margin-left: auto;
+  }

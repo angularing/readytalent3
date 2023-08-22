@@ -9,6 +9,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { JobSearchComponent } from './job-search/job-search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { JobListItemComponent } from './job-list-item/job-list-item.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HomeComponent,
     PageNotFoundComponent,
     JobSearchComponent,
-    DashboardComponent
+    DashboardComponent,
+    JobListItemComponent
   ],
   imports: [
     BrowserModule,

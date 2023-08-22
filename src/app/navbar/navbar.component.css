@@ -2,14 +2,16 @@
 {
     display: flex;
     margin-left: auto; /*align right, might change this, doesn't feel right for some reason?*/
-    margin-right: 2em;
-    margin-top: 2em;
     gap: 3rem;
+
+    justify-content: center;
+    align-items: center;
 
     > li{
         display: inline-block;
+
         font-weight: bold;
-        font-size: x-large;
+        font-size: larger;
         
         > a {
             text-decoration: none;
@@ -20,8 +22,10 @@
 
 .navbar{
     display: flex;
-    padding: 3em;
-    justify-content: center;
+    flex-direction: row;
+
+    margin: auto;
+    width: 70%;
 }
 
 .mouse:hover {
