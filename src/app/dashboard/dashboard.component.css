@@ -1,67 +1,59 @@
 .status-section {
-    display: flex;
-    justify-content: space-between;
     width: 60%;
     margin: auto;
-    padding-top: 0em;
-     /* flex-direction: column;
-     align-items: flex-start;
-     padding: 20px; */
    }
-  
-  .status-box {
-    width: 60%;
-    background-color: rgb(225, 225, 225);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+   .status-text {
+    margin-bottom: 1em;
+    font-size: 28px;
   }
 
+  .status-box {
+    width: 20%;
+    background-color: rgb(225, 225, 225);
+    padding: 1em;
+    display: inline-block;
+    align-items: center;
+    margin-right: 2em;
+    text-decoration: none; /* Remove the default link underline */
+    color:black;
+    transition: #f09999 0.3s ease;
+    border: 1px solid transparent;
+  }
+
+  .status-box:hover {
+    border: 2px solid red;
+    background-color: #f09999; /* Change the background color when hovered */
+   }
+
   .status-number {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 32px;
+    margin-bottom: 5px;
   }
   
   .word-label {
     font-size: 18px;
   }
 
-  .status-text {
-    font-size: 28px;
-    margin-bottom: 10px;
-  }
-
-  .status-link {
-    text-decoration: none; /* Remove the default link underline */
-   }
-
-  .status-link:hover .status-box {
-    background-color: #f09999; /* Change the background color when hovered */
-   }
-
-  .profile-section {
-    width: 10%;
-    display: flex;
-    align-items: center;
-  }
-  
   .profile-box {
     background-color: #f2f2f2;
-    padding: 20px;
     text-align: center;
+    padding: 2em;
+    margin-bottom: 2em;
   }
   
   .profile-picture {
-    width: 100px;
-    height: 100px;
+    width: 15%;
+    height: 35%;
+    padding: 1em;
     border-radius: 50%;
-    margin-bottom: 10px;
   }
   
   .profile-username {
     font-size: 18px;
   }  
+
+  
 
 
   /*2nd draft - working to certain extent*/
