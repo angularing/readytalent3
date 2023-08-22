@@ -8,17 +8,30 @@
     font-size: 28px;
   }
 
+  .status-box-container{
+    display: flex;
+    flex-direction: row;
+  
+    justify-content: space-around;
+    justify-items: center;
+  
+    > a{
+      text-decoration: none;/* Remove the default link underline */
+    }
+  }
+
   .status-box {
-    width: 20%;
+    width: 80%;
     background-color: rgb(225, 225, 225);
     padding: 1em;
     display: inline-block;
     align-items: center;
-    margin-right: 2em;
-    text-decoration: none; /* Remove the default link underline */
+    
     color:black;
     transition: #f09999 0.3s ease;
     border: 1px solid transparent;
+
+    margin-right: 2em;
   }
 
   .status-box:hover {
@@ -43,8 +56,6 @@
   }
   
   .profile-picture {
-    width: 15%;
-    height: 35%;
     padding: 1em;
     border-radius: 50%;
   }
