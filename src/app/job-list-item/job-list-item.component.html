@@ -12,9 +12,10 @@
                 <h3>View Details</h3>
             </div>
             <div class="job-item-footer">
-                <p><img src="/assets/icons/clock.svg">Closed on XX/XX/XXXX</p>
-                <p>$XX/hour</p>
-                <p><img src="/assets/icons/user.svg">X Vacancies</p>
+                <p><img src="/assets/icons/clock.svg">Closed on {{job.closingDate}}</p>
+                <p *ngIf="job.type=='Full Time' || job.type=='IWSP'">${{job.salary}}</p>
+                <p *ngIf="job.type=='Part Time' || job.type=='Contract'">${{job.salary}}/hour</p>
+                <p><img src="/assets/icons/user.svg">{{job.vacancies}} Vacancies</p>
                 <p><img src="/assets/icons/briefcase.svg">{{job.type}}</p>
             </div>
         </section>

@@ -7,7 +7,15 @@ const DisplayTypes = {
   List: "List"
 } as const;
 
+const JobTypes = {
+  FullTime: 'Full Time', 
+  PartTime: 'Part Time', 
+  Contract: 'Contract', 
+  IWSP: 'IWSP'
+} as const;
+
 type DisplayType = typeof DisplayTypes[keyof typeof DisplayTypes];
+type JobType = typeof JobTypes[keyof typeof JobTypes];
 
 @Component({
   selector: 'app-job-search',

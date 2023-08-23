@@ -7,5 +7,5 @@ import { Job } from '../models/job-model';
   styleUrls: ['./job-list-item.component.css']
 })
 export class JobListItemComponent {
-  @Input() job: Job = new Job("","","");
+  @Input() job: Job = new Job();
 }
