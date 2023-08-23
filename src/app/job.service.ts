@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 })
 export class JobService {
 
-  static readonly IS_DEV: boolean = true; //temp
+  static readonly IS_DEV: boolean = false; //temp
   static readonly JOB_API_URL: string = "https://readytalent3.azurewebsites.net/jobs";
   static readonly JOB_API_URL_DEV: string = "http://localhost:8080/jobs";
 
